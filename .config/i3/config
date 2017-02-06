@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -209,3 +209,22 @@ setxkbmap -model macbook79
 exec_always feh --bg-scale ~/Pictures/wallpapers/milky-way-wallpaper-1080p-wallpaper-4.jpg
 
 exec --no-startup-id compton -f -c
+
+# AH Tabbed layout on new workspaces
+workspace_layout tabbed
+
+bindsym $mod+question exec "i3lock -c 000000 -n"
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# AH SFX
+#bindsym $mod+KP_1 exec "sh ~/bin/sfx.sh" # DOESNT WORK
+
+bindsym $mod+KP_End exec "sh ~/bin/sfx.sh 1"
+bindsym $mod+KP_Down exec "sh ~/bin/sfx.sh 2"
+bindsym $mod+KP_Next exec "sh ~/bin/sfx.sh 3"
+bindsym $mod+KP_Add exec "sh ~/bin/say.sh"
