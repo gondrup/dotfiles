@@ -1,43 +1,44 @@
 function goto -a project classes
-#    set project $argv[1];
-#    if set -q $argv[2]	
-#        set classes $argv[2]
-#    else
-#    	set classes ''
-#    end
-	
+    set switched 0
+
     if test $project = 'vc'; or test $project = 'vcars'
-	cd /var/www/html/vcars.local/public_html/
+	cd /var/www/html/vcars.local/public_html/; \
+	set switched 1
     else if test $project = 'vcs'
-	cd /var/www/html/vcars.symfony.local/
+	cd /var/www/html/vcars.symfony.local/; \
+	set switched 1
     else if test $project = 'v-'; or test $project = 'vh'
-	cd /var/www/html/v-cars.local/public_html/
+	cd /var/www/html/v-cars.local/public_html/; \
+	set switched 1
     else if test $project = 'vcom'
-	cd /var/www/html/vcom.local/public_html/
+	cd /var/www/html/vcom.local/public_html/; \
+	set switched 1
     else if test $project = 'api'
-	cd /var/www/html/api.local/public_html/
+	cd /var/www/html/api.local/public_html/; \
+	set switched 1
     else if test $project = 'dweb'
-	cd /var/www/html/dweb.local/
+	cd /var/www/html/dweb.local/; \
+	set switched 1
     else if test $project = 'dna'
-	cd /var/www/html/vcarsdna.local/
+	cd /var/www/html/vcarsdna.local; \
+	set switched 1
     else if test $project = 'tools'
-	cd /var/www/html/tools/
+	cd /var/www/html/tools/; \
+	set switched 1
     end
 
-#    if test -n $classes
-#	echo cd to classes now ... $classes
-#    end
-    
-#    if test $project!= 'vcs' ] and [ $project!= 'dweb' ] and [ $project!= 'dna' ] and [ $project!= 'tools' ] and [ $project!= 'api' ] and [ $classes = 'c' ]
-#	cd includes/extlib/composer/vendor/used-car-sites/classes/
-#    end
-    
-#    if test $project = 'api' ] and [ $classes = 'c' ]
-#	cd vendor/used-car-sites/classes/	
-#    end
-    
-#    if test $project = 'vcs' ] and [ $classes = 'c' ]
-#	cd vendor/used-car-sites/classes/	
+#    if test "$switched" -eq 1; and test "$classes" = 'c'
+#	if test $project != 'vcs'; and test $project != 'dweb'; and test $project != 'dna'; and test $project != 'tools'; and test $project != 'api'
+#	    cd includes/extlib/composer/vendor/used-car-sites/classes/
+#	end
+#    
+#	if test $project = 'api'
+#	    cd vendor/used-car-sites/classes/	
+#        end
+#    
+#        if test $project = 'vcs'
+#	    cd vendor/used-car-sites/classes/	
+#        end
 #    end
 end
 
