@@ -213,7 +213,8 @@ bar {
 setxkbmap -model macbook79
 
 # Add wallpaper
-exec_always feh --bg-scale ~/Pictures/wallpapers/milky-way-wallpaper-1080p-wallpaper-4.jpg
+#exec_always feh --bg-scale ~/Pictures/wallpapers/milky-way-wallpaper-1080p-wallpaper-4.jpg
+exec_always feh --bg-scale ~/Pictures/wallpapers/526-IMG_1533.jpg
 
 # Window composition, add "-c" for shadows
 #exec --no-startup-id compton --config ~/.config/compton.conf
@@ -237,3 +238,14 @@ bindsym $mod+KP_End exec "sh ~/bin/sfx.sh 1"
 bindsym $mod+KP_Down exec "sh ~/bin/sfx.sh 2"
 bindsym $mod+KP_Next exec "sh ~/bin/sfx.sh 3"
 bindsym $mod+KP_Add exec "sh ~/bin/say.sh"
+
+#exec export TOPCOLORS="header=,#1\
+#:1min=,399#32:1min=400,799#33:1min=800,#31\
+#:5min=,299#32:5min=300,599#33:5min=600,#31\
+#:15min=,199#32:15min=200,399#33:15min=400,#31\
+#:cpu.user=,9#32:cpu.user=10,49#33:cpu.user=50,#31\
+#:cpu.system=,9#32:cpu.system=10,49#33:cpu.system=50,#31\
+#:cpu.interrupt=,9#32:cpu.interrupt=10,49#33:cpu.interrupt=50,#31"
+
+# AH Pop-up calendar (zenity dialog)
+bindsym $mod+c exec zenity --calendar
