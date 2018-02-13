@@ -210,7 +210,7 @@ bar {
 }
 
 # Set keyboard model for MAC ONLY (comment out otherwise)
-setxkbmap -model macbook79
+#setxkbmap -model macbook79
 
 # Add wallpaper
 #exec_always feh --bg-scale ~/Pictures/wallpapers/milky-way-wallpaper-1080p-wallpaper-4.jpg

@@ -45,6 +45,9 @@ end
 alias ssh_web="ssh -p 2020 ukfastweb"
 alias ssh_dna="ssh -p 2020 ukfastdna"
 alias ssh_worker="ssh -p 2020 ukfastworker"
+alias ssh_storage="ssh -p 2020 ukfaststorage"
+alias ssh_imageweb="ssh -p 2020 ukfastimageweb"
+alias ssh_db="ssh -p 2020 ukfastdb"
 
 alias gitkraken="gitkraken -p ."
 
@@ -53,6 +56,12 @@ function weather
 end
 
 set -gx GOPATH $HOME/go
-set -gx PATH $PATH $HOME/go/bin
+set -gx PATH $PATH /usr/local/bin /usr/local/sbin /home/adrian/bin $HOME/go/bin
 
 alias emc="emacsclient -c"
+
+#eval (thefuck --alias | tr '\n' ';')
+
+alias natgeo="python /opt/extras.ubuntu.com/national-geographic-wallpaper/share/national-geographic-wallpaper/ngdownloader.py"
+
+eval (python -m virtualfish)

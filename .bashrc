@@ -188,3 +188,5 @@ PATH=$PATH:~/bin
 # Go
 GOHOME=$HOME/go
 PATH=$PATH:$GOHOME/bin
+# Virtual Environment Wrapper
+source /usr/local/bin/virtualenvwrapper.sh
